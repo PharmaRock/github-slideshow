@@ -11,3 +11,13 @@ I'm the GitHub Learning Lab bot and I'm here to help guide you in your journey t
 I'll meet you over there, can't wait to get started!
 
 This course is using the :sparkles: open source project [reveal.js](https://github.com/hakimel/reveal.js/). In some cases we’ve made changes to the history so it would behave during class, so head to the original project repo to learn more about the cool people behind this project.
+
+## PK/PD exploration for a T cell engager
+
+Use the `script/pkpd_tcell_engager.py` helper to explore a one-compartment PK model linked to tumor kill and effector T cell stimulation. Everything runs with the Python standard library, so you can execute it directly:
+
+```bash
+python script/pkpd_tcell_engager.py --duration 40 --dose 60 --interval 7 --n-doses 5
+```
+
+The script prints a short summary that reports the peak concentration, final tumor burden, effector T cell level, and a qualitative response flag. Model assumptions and key tunable inputs are exposed as command-line flags (clearance, volume, EC50, kmax, Hill coefficient, growth rates, and carrying capacities) so you can sweep PK and PD scenarios without extra dependencies.
